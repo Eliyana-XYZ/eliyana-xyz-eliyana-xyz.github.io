@@ -448,6 +448,102 @@
           font-family: Arial !important;
           word-break: break-word !important;
         }
+
+        /* Compatibility Section Styles */
+        .compatibility-section {
+            padding: 60px 20px;
+            background-color: #f8fafc;
+        }
+        
+        .compatibility-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .compatibility-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .compatibility-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .compatibility-icon {
+            background-color: #ebf4ff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .compatibility-icon svg {
+            width: 24px;
+            height: 24px;
+            color: #4a89dc;
+        }
+        
+        .compatibility-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0;
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .platform-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .platform-item.compatible {
+            border-color: #48bb78;
+            background-color: #f0fff4;
+        }
+        
+        .platform-item svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            color: #48bb78;
+        }
+        
+        .platform-name {
+            font-weight: 500;
+            color: #2d3748;
+        }
+        
+        .compatibility-note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        .compatibility-note p {
+            margin: 0;
+            color: #856404;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -534,6 +630,82 @@
                     </div>
                     <h3 class="feature-title">Easy Integration</h3>
                     <p class="feature-description">Seamlessly integrates with your existing website with just a few lines of code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compatibility Section -->
+    <section class="compatibility-section">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Platform Compatibility</h2>
+            <p class="section-description">Our AI chatbot works seamlessly with popular website builders and calendar systems.</p>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Website Platforms -->
+                    <div class="compatibility-card">
+                        <div class="compatibility-header">
+                            <div class="compatibility-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9-9a9 9 0 00-9 9m0 0v9" />
+                                </svg>
+                            </div>
+                            <h3 class="compatibility-title">Website Platforms</h3>
+                        </div>
+                        
+                        <div class="platform-grid">
+                            <div class="platform-item compatible">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="platform-name">Wix Websites</span>
+                            </div>
+                            <div class="platform-item compatible">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="platform-name">Squarespace Websites</span>
+                            </div>
+                        </div>
+                        
+                        <div class="compatibility-note">
+                            <p><strong>Note:</strong> Integration requires a paid website builder plan. Free plans do not support custom code integration.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Calendar Systems -->
+                    <div class="compatibility-card">
+                        <div class="compatibility-header">
+                            <div class="compatibility-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="compatibility-title">Calendar Integration</h3>
+                        </div>
+                        
+                        <div class="platform-grid">
+                            <div class="platform-item compatible">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="platform-name">Google Calendar</span>
+                            </div>
+                            <div class="platform-item compatible">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="platform-name">Outlook Calendar</span>
+                            </div>
+                        </div>
+                        
+                        <div class="compatibility-note">
+                            <p><strong>Seamless Sync:</strong> Appointments booked through the AI chatbot automatically sync with your preferred calendar system, preventing double bookings and keeping your schedule up-to-date.</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
