@@ -894,11 +894,11 @@
             <h2 class="section-title">Pricing Plans</h2>
             <p class="section-description">Transparent Pricing.</p>
             
-            <!-- MODIFIED: Changed to single centered card -->
-            <div class="max-w-md mx-auto">
+            <!-- Modified: Changed to two cards side by side -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 
-                <!-- Floating Widget Plan -->
-                <div class="pricing-card mx-auto">
+                <!-- Floating Widget Plan (existing card) -->
+                <div class="pricing-card">
                     <div class="pricing-header">
                         <h3 class="pricing-title">Floating Widget</h3>
                         <div class="pricing-price">$150/month</div>
@@ -949,6 +949,19 @@
                     </div>
                     
                     <button id="floating-widget-trial" class="trial-button">Subscribe Now!</button>
+                </div>
+                
+                <!-- Free Trial Plan (new card with the form) -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Free Trial</h3>
+                        <div class="pricing-price">Try Before You Buy</div>
+                        <p class="pricing-description">No commitment required</p>
+                    </div>
+                    
+                    <!-- Embed the provided form -->
+                    <div style="width:100%;height:500px;" data-fillout-id="rutCD9Zu9qus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+                    <script src="https://server.fillout.com/embed/v1/"></script>
                 </div>
             </div>
         </div>
@@ -1072,7 +1085,7 @@ Calibri;color:#595959;mso-themecolor:text1;mso-themetint:166;">These Legal Terms
     <!-- Form Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Handle Floating Widget trial form - MODIFIED THIS PART ONLY
+            // Handle Floating Widget trial form
             document.getElementById('floating-widget-trial').addEventListener('click', function() {
                 const formContainer = document.createElement('div');
                 formContainer.style.position = 'fixed';
