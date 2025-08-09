@@ -891,18 +891,72 @@
     <!-- Pricing Section -->
     <section id="pricing" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="section-title">Exclusive Members</h2>
-            <p class="section-description">Loved your free trial? Continue with our pricing plan.</p>
+            <h2 class="section-title">Pricing Plans</h2>
+            <p class="section-description">Transparent Pricing.</p>
             
-            <!-- Single centered Free Trial card -->
-            <div class="flex justify-center max-w-6xl mx-auto">
+            <!-- Modified: Changed to two cards side by side -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 
-                <!-- Free Trial Plan -->
-                <div class="pricing-card max-w-lg">
+                <!-- Floating Widget Plan (existing card) -->
+                <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Exclusive Members</h3>
+                        <h3 class="pricing-title">Floating Widget</h3>
                         <div class="pricing-price">$150/month</div>
-                        <p class="pricing-description">CAD + tax</p>
+                        <p class="pricing-description">CAD plus tax</p>
+                        <div class="mt-2">
+                            <div class="incompatible compatibility-indicator">Does NOT work with FREE website builder plans</div>
+                            <div class="compatible compatibility-indicator">Works with PAID website builder plans</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Sits in the corner of your website and looks very professional</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Handles booking for you</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Checks availability, no overlapping bookings</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Sends confirmation emails to you and your customer</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Handles FAQs for you</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Collects customer info for you</span>
+                        </div>
+                    </div>
+                    
+                    <button id="floating-widget-trial" class="trial-button">Subscribe Now!</button>
+                </div>
+                
+                <!-- Free Trial Plan (new card with the form) -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Had a free trial?</h3>
+                        <div class="pricing-price">Subscribe now to keep your agent!</div>
+                        <p class="pricing-description"></p>
                     </div>
                     
                     <!-- Embed the provided form -->
@@ -917,7 +971,7 @@
     <section id="contact" class="contact-section">
         <div class="container mx-auto px-4">
             <h2 class="section-title">Contact Us</h2>
-            <p class="section-description">Reach out to us for more information or to be selected for an early access free trial..</p>
+            <p class="section-description">Reach out to us for more information or to get started.</p>
             
             <div class="max-w-4xl mx-auto">
                 <div class="contact-card">
@@ -1031,6 +1085,30 @@ Calibri;color:#595959;mso-themecolor:text1;mso-themetint:166;">These Legal Terms
     <!-- Form Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Handle Floating Widget trial form
+            document.getElementById('floating-widget-trial').addEventListener('click', function() {
+                const formContainer = document.createElement('div');
+                formContainer.style.position = 'fixed';
+                formContainer.style.top = '0px';
+                formContainer.style.left = '0px';
+                formContainer.style.right = '0px';
+                formContainer.style.bottom = '0px';
+                
+                const filloutDiv = document.createElement('div');
+                filloutDiv.setAttribute('data-fillout-id', '1LZZTj2Eymus');
+                filloutDiv.setAttribute('data-fillout-embed-type', 'fullscreen');
+                filloutDiv.style.width = '100%';
+                filloutDiv.style.height = '100%';
+                filloutDiv.setAttribute('data-fillout-inherit-parameters', '');
+                
+                formContainer.appendChild(filloutDiv);
+                document.body.appendChild(formContainer);
+                
+                const script = document.createElement('script');
+                script.src = 'https://server.fillout.com/embed/v1/';
+                document.body.appendChild(script);
+            });
+            
             // Terms and Conditions Modal
             const termsModal = document.getElementById('terms-modal');
             const termsLink = document.getElementById('terms-link');
